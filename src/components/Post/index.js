@@ -22,6 +22,7 @@ export default function Post(props){
         comment.map((v,i)=>{
             if(v.id == newComment[0]){
                 setComment(comment.message =[newComment[1]])
+                // setNewComment("")
             }
             else{
                 const newObj ={
@@ -29,8 +30,10 @@ export default function Post(props){
                     message: [newComment[1]]
                 }
                 setComment([...comment, newObj])
+                // setNewComment("")
             }
         })
+        
         
     }
     // console.log("THIS IS PROPS ==>",props.payload )
@@ -48,7 +51,7 @@ export default function Post(props){
           </div>
           </div>
           <div className="postDetails">{postDetails}</div>
-          <img className="postImage" src="http://1.bp.blogspot.com/-Ctv1m-63Q7Q/TozUCb70gQI/AAAAAAAAAfw/UQk-nUN3NHM/s1600/beautiful+nature+scenery-1.jpg" alt="PostImage" />
+          <img className="postImage" src={postURL} alt="PostImage" />
           <div className="emojiPack">
              <div className="emojiImage">  <img width="50px" src={EMOJI3} alt="Emoji"/></div>
              <div className="emojiImage">  <img width="50px" src={EMOJI2} alt="Emoji"/></div>

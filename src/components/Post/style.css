@@ -73,8 +73,9 @@
     transition: 0.2s;
   }
   .emojiImage img:hover{
-    padding-top: 10%;
+    /* padding-top: 10%; */
     transition: 0.2s;
+    width: 60px;
 }
 .MessageBox{
   display: flex;
@@ -106,15 +107,16 @@
   flex-direction: column;
   background-color: #303030;
   width: 100%;
-  margin-top: 2%;
+  margin-top: .2%;
 }
 .commentProfileImage{
   margin-left: -30%;
   margin-top: 1.5%;
 }
 .Comment{
-  border-bottom: 1px solid rgb(102, 102, 102);
+  /* border-bottom: 1px solid rgb(102, 102, 102); */
 }
 .CommentText{
-  margin-top: 1%;
+  margin: -2% 0% 3% 14%
+  
 }

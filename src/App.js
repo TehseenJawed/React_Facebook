@@ -37,9 +37,8 @@ function App() {
           <i class="fas fa-bell-slash setIcons"></i>
           <i class="fas fa-users fa-lg setIcons"></i>
         </div>
-        {/* <form action="https://www.mtehseen.com/"> */}
-        <button type="submit"  className="profile"><a href="https://www.mtehseen.com/">Developer Profile</a></button>
-        {/* </form> */}
+        <button type="submit"  className="profile"><a target="_blank" href="https://www.mtehseen.com/">Developer Profile</a></button>
+    
       </div>
     </div>)
   }
@@ -49,9 +48,9 @@ function App() {
     var [postURL, setPostURL] = useState("");
 
     function sendPost(){
-      let minutes = new Date().getMinutes()
-      let hours = new Date().getHours()
-      let date = minutes+" m "+hours+" h"
+      let today = new Date();
+      
+      let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
       var setObj = {id : count,
         time : date,
         postDetails,
@@ -70,6 +69,7 @@ function App() {
       <img className="userImg setuserPostImage" width="50px" height="50px" src={USERIMAGE} alt="User Image" />
       <textarea className="uploadBodytextArea"  value={postDetails} rows="4" onChange={(e) => setPostDetails(e.target.value)}  placeholder="Type Your Post Details " rows="1" cols="50"></textarea>
       <input className="uploadLink" type="text" value={postURL} onChange={(e) => setPostURL(e.target.value)}  placeholder="Image URL" />
+      <div className="practiceLink"><label>Test Link</label><input className="uploadLink" type="text" value="https://www.sammobile.com/wp-content/uploads/2019/03/keyguard_default_wallpaper_silver.png" placeholder="Image URL" /></div>
       <div className="pageProperty">
         <div className="subProperty">
         <i class="fas fa-video fa-2x"></i>
