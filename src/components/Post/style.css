@@ -1,0 +1,120 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  margin-bottom: 1%;
+}
+.Page {
+  width: 50%;
+  background-color: #242629;
+  box-shadow: 1px 1px 5px #191a1b;
+  overflow: hidden;
+  padding: 2% 0% 2% 0%;
+  margin-bottom: 1%;
+  }
+.postProfile{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+}
+.profileImg {
+  border-radius: 50px;
+  display: inline-block;
+  border: 2px solid rgb(71, 171, 218);
+  margin-left: 1%;
+}
+.profileName {
+  width: 50%;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin: 2.5%;
+  color: rgb(255, 255, 255);
+}
+.timer{
+    color: gray;
+    font-size: 15px;
+}
+.profileIcons{
+    width: 30%;
+}
+.profileIcons i{
+    float: right;
+    color: rgb(71, 171, 218);
+    margin: 8%;   
+    transition: 0.5s;
+  }
+  .profileIcons i:hover{
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+.postDetails{
+    color: white;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    /* border-top: 1px solid gray; */
+}
+.postImage{
+    width: 100%;
+}
+.emojiPack{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 10%;
+}
+.emojiImage img{
+    padding-top: 0%;
+    transition: 0.2s;
+  }
+  .emojiImage img:hover{
+    padding-top: 10%;
+    transition: 0.2s;
+}
+.MessageBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.MessageText{
+  margin-left: 2%;
+  border-radius: 50px;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: #303030;
+  width: 67%;
+  padding: 3%;
+  font-size: 17px;
+}
+.MessageButton{
+  margin-left: 1%;
+  width: 13%;
+  border:none;
+  background-color: rgb(71, 171, 218);
+  color: white;
+  border-radius: 50px;
+}
+.commentBox{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #303030;
+  width: 100%;
+  margin-top: 2%;
+}
+.commentProfileImage{
+  margin-left: -30%;
+  margin-top: 1.5%;
+}
+.Comment{
+  border-bottom: 1px solid rgb(102, 102, 102);
+}
+.CommentText{
+  margin-top: 1%;
+}
