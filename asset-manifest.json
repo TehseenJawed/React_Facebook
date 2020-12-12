@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/React_Facebook/static/css/main.5bbb2cae.chunk.css",
+    "main.js": "/React_Facebook/static/js/main.843948cc.chunk.js",
+    "main.js.map": "/React_Facebook/static/js/main.843948cc.chunk.js.map",
+    "runtime-main.js": "/React_Facebook/static/js/runtime-main.d06c70b8.js",
+    "runtime-main.js.map": "/React_Facebook/static/js/runtime-main.d06c70b8.js.map",
+    "static/js/2.a6317a78.chunk.js": "/React_Facebook/static/js/2.a6317a78.chunk.js",
+    "static/js/2.a6317a78.chunk.js.map": "/React_Facebook/static/js/2.a6317a78.chunk.js.map",
+    "static/js/3.852241b1.chunk.js": "/React_Facebook/static/js/3.852241b1.chunk.js",
+    "static/js/3.852241b1.chunk.js.map": "/React_Facebook/static/js/3.852241b1.chunk.js.map",
+    "index.html": "/React_Facebook/index.html",
+    "static/css/main.5bbb2cae.chunk.css.map": "/React_Facebook/static/css/main.5bbb2cae.chunk.css.map",
+    "static/js/2.a6317a78.chunk.js.LICENSE.txt": "/React_Facebook/static/js/2.a6317a78.chunk.js.LICENSE.txt",
+    "static/media/emoji1.449e4279.gif": "/React_Facebook/static/media/emoji1.449e4279.gif",
+    "static/media/emoji2.85b0ad88.gif": "/React_Facebook/static/media/emoji2.85b0ad88.gif",
+    "static/media/emoji3.d50adb2f.gif": "/React_Facebook/static/media/emoji3.d50adb2f.gif",
+    "static/media/emoji4.84689dfc.gif": "/React_Facebook/static/media/emoji4.84689dfc.gif",
+    "static/media/userImage.0c15c493.jpg": "/React_Facebook/static/media/userImage.0c15c493.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d06c70b8.js",
+    "static/js/2.a6317a78.chunk.js",
+    "static/css/main.5bbb2cae.chunk.css",
+    "static/js/main.843948cc.chunk.js"
+  ]
+}
