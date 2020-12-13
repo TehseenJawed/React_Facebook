@@ -77,6 +77,9 @@
     transition: 0.2s;
     width: 60px;
 }
+.commentEmoji{
+  margin-left: 12%;
+}
 .MessageBox{
   display: flex;
   flex-direction: row;

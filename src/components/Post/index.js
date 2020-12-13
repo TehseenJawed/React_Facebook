@@ -10,32 +10,53 @@ export default function Post(props){
     
     const [comment, setComment] =useState(
         [
-            {id:0,
-            message:[]},
+            // {}
             
         ]
     )
     const [newComment, setNewComment]= useState([])
-    function addComment(){
-        console.log("This completed ",newComment[0])
-        comment.map((v,i)=>{
-            if(v.id == newComment[0]){
-                setComment(comment.message =[newComment[1]])
-                // setNewComment("")
+    function addComment(emoJi, Id){
+      if(emoJi != 0){
+        if(comment === undefined || comment.length == 0){
+            const newObj1 ={
+                id: Id,
+                emoji:true,
+                emojiURL:emoJi
             }
-            else{
-                const newObj ={
-                    id: newComment[0],
-                    message: [newComment[1]]
+            setComment([ newObj1])
+        }
+
+      }
+      else{
+        if(comment === undefined || comment.length == 0){
+            const newObj1 ={
+                id: newComment[0],
+                message: [newComment[1]],
+                emoji:false
+            }
+            setComment([ newObj1])
+        }
+        else{
+            comment.map((v,i)=>{
+                if(v.id === newComment[0]){
+                    // var Obj3 = {id:newComment[0] ,message:[...comment[newComment[0]].message, newComment[1]]}
+                    // setComment(comment[v.id].message.push(newComment[1]) )
                 }
-                setComment([...comment, newObj])
-                // setNewComment("")
+                else{
+                    const newObj ={
+                        id: newComment[0],
+                        message: [newComment[1]],
+                        emoji:false
+                    }
+                    console.log("I am working in else ==>", newObj)
+                    setComment([...comment , newObj])
+                }
             }
-        })
-        
-        
+        )
+        }
     }
-    // console.log("THIS IS PROPS ==>",props.payload )
+}
+    console.log(comment)
     return(<div className="Container">
         {props.payload.map((v,i)=>{
             let {id, time, postDetails, postURL} = v
@@ -52,20 +73,33 @@ export default function Post(props){
           <div className="postDetails">{postDetails}</div>
           <img className="postImage" src={postURL} alt="PostImage" />
           <div className="emojiPack">
-             <div className="emojiImage">  <img width="50px" src={EMOJI3} alt="Emoji"/></div>
-             <div className="emojiImage">  <img width="50px" src={EMOJI2} alt="Emoji"/></div>
-             <div className="emojiImage">  <img width="50px" src={EMOJI1} alt="Emoji"/></div>
-             <div className="emojiImage">  <img width="50px" src={EMOJI4} alt="Emoji"/></div>
+             <div className="emojiImage" onClick={() => addComment(EMOJI3, id)}>  <img width="50px" src={EMOJI3} alt="Emoji"/></div>
+             <div className="emojiImage" onClick={() => addComment(EMOJI2, id)}>  <img width="50px" src={EMOJI2} alt="Emoji"/></div>
+             <div className="emojiImage" onClick={() => addComment(EMOJI1, id)}>  <img width="50px" src={EMOJI1} alt="Emoji"/></div>
+             <div className="emojiImage" onClick={() => addComment(EMOJI4, id)}>  <img width="50px" src={EMOJI4} alt="Emoji"/></div>
           </div>
           <div className="MessageBox">
           <img className="profileImg" width="50px" height="50px" src={USERIMAGE} alt="User Image" />
            <input className="MessageText" value={newComment[1]} onChange={(e) => setNewComment([id,e.target.value])} type="text" placeholder="Type Your Comment..."/>   
-           <button className="MessageButton" onClick={addComment}><i class="fas fa-paper-plane fa-lg"></i></button>
+           <button className="MessageButton" onClick={() => addComment(0)}><i class="fas fa-paper-plane fa-lg"></i></button>
           </div>
           {comment.map((v,i)=> {
-              
+              if(v.emoji===true){
+                return(
+                    <div key={i} className="commentBox">
+                    <div className="Comment">
+                    <div className="postProfile ">
+                <img className="profileImg commentProfileImage" width="40px" height="40px" src={USERIMAGE} alt="User Image" />
+                <div className="profileName">Tehseen Jawed </div>
+                <div className="emojiImage commentEmoji">  <img width="50px" src={v.emojiURL} alt="Emoji"/></div>
+                </div>
+                    </div>
+                </div>
+                )
+              }
+              else{
                 if(id == v.id){
-                    console.log(v)
+                    
                     return(
                         <div key={i} className="commentBox">
                         <div className="Comment">
@@ -77,8 +111,9 @@ export default function Post(props){
                         </div>
                     </div>
                     )
-                    }
+                    }}
           })}
+          
           
         </div>
             )
