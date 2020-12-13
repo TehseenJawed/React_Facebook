@@ -12,8 +12,7 @@ export default function Post(props){
         [
             {id:0,
             message:[]},
-            {id:1,
-            message:[]},
+            
         ]
     )
     const [newComment, setNewComment]= useState([])
