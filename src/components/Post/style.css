@@ -14,6 +14,7 @@
   overflow: hidden;
   padding: 2% 0% 2% 0%;
   margin-bottom: 1%;
+  ;
   }
 .postProfile{
     display: flex;
@@ -38,6 +39,7 @@
 .timer{
     color: gray;
     font-size: 15px;
+    width: 50%;
 }
 .profileIcons{
     width: 30%;
@@ -67,15 +69,34 @@
   flex-direction: row;
   flex-wrap: nowrap;
   width: 10%;
+  z-index: 1;
 }
 .emojiImage img{
     padding-top: 0%;
     transition: 0.2s;
   }
   .emojiImage img:hover{
-    /* padding-top: 10%; */
+    padding-top: 10%;
     transition: 0.2s;
     width: 60px;
+}
+.emojiResponse{
+  width: 10%;
+  display: inline-block;
+  /* margin: 1%; */
+}
+.setEmojiImage{
+  width: 15%;
+  ;
+  position: relative;
+  font-size: 12px;
+}
+.setEmojiImage img{
+  position: absolute;
+  top: -8px;
+  left: 0px;
+
+
 }
 .commentEmoji{
   margin-left: 12%;
@@ -120,6 +141,7 @@
   /* border-bottom: 1px solid rgb(102, 102, 102); */
 }
 .CommentText{
-  margin: -2% 0% 3% 14%
+  margin: -2% 0% 3% 14%;
+  color:rgb(165, 163, 163);
   
 }
