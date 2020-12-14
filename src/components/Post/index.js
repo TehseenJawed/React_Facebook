@@ -135,7 +135,7 @@ export default function Post(props) {
                 onClick={() => addEmoji(EMOJI4, id)}
               >
                 
-                {/* <img width='50px' src={EMOJI4} alt='Emoji' /> */}
+                <img width='50px' src={EMOJI4} alt='Emoji' />
               </div>
             </div>
 
